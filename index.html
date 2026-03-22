@@ -1,116 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Malachi Horsangchai</title>
-
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+    .container {
       display: flex;
-      height: 100vh;
+      min-height: 100vh;
     }
 
     .left {
       width: 50%;
-      background: #f5f5f5;
+      padding: 80px 60px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      padding: 40px;
-      text-align: center;
+      background: #f8fafc;
     }
 
     .right {
       width: 50%;
-      background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');
+      background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
       background-size: cover;
       background-position: center;
     }
 
-    img {
-      width: 160px;
-      height: 160px;
+    .profile-img {
+      width: 170px;
+      height: 170px;
       object-fit: cover;
       border-radius: 50%;
-      border: 4px solid #1e293b;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+      border: 4px solid #0f172a;
     }
 
     h1 {
-      font-size: 42px;
-      margin: 10px 0;
-      color: #1e293b;
+      font-size: 52px;
+      margin: 0 0 10px 0;
+      line-height: 1.1;
     }
 
-    p {
-      max-width: 400px;
-      color: #444;
-      line-height: 1.6;
+    .subtitle {
+      font-size: 18px;
+      color: #475569;
+      margin-bottom: 30px;
     }
 
-    .buttons {
-      margin-top: 20px;
+    .bio {
+      max-width: 560px;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #334155;
+      margin-bottom: 35px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 30px;
     }
 
     .btn {
-      display: block;
-      margin: 10px auto;
-      padding: 12px 20px;
-      width: 200px;
-      background: #1e293b;
-      color: white;
-      border-radius: 25px;
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 999px;
       text-decoration: none;
-      transition: 0.2s;
-    }
-
-    .btn:hover {
-      background: #334155;
-      transform: translateY(-2px);
-    }
-
-    .icons {
-      margin-top: 20px;
-    }
-
-    .icons a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #1e293b;
       font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #0f172a;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #1e293b;
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+    }
+
+    .btn-secondary:hover {
+      background: #f1f5f9;
+    }
+
+    .links a {
+      margin-right: 18px;
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left,
+      .right {
+        width: 100%;
+      }
+
+      .left {
+        padding: 50px 25px;
+      }
+
+      .right {
+        min-height: 320px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .bio {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
-
 <body>
+  <div class="container">
+    <div class="left">
+      <img src="IMG_0051.png" alt="Malachi Horsangchai" class="profile-img" />
 
-<div class="left">
-  <img src="IMG_0051.png" alt="profile">
+      <h1>Malachi Horsangchai</h1>
+      <div class="subtitle">Statistics • Political Science • History</div>
 
-  <h1>Malachi Horsangchai</h1>
+      <div class="bio">
+        I am a student at the University of Rochester pursuing studies in Statistics,
+        Political Science, and History. Born in California and raised in Hong Kong,
+        I am currently based in New York.
+        <br /><br />
+        My interests lie at the intersection of quantitative analysis and the social
+        sciences, where I apply statistical and mathematical methods to better
+        understand political behavior, institutional dynamics, and historical
+        patterns.
+      </div>
 
-  <p>
-    Hi there, my name is Malachi, a student at the University of Rochester studying
-    Statistics, Political Science, and History. Currently based in New York, I was
-    born in California and raised in Hong Kong. I am passionate in analying political
-    and historical details through the lens of mathematics and statistics.
-  </p>
+      <div class="button-group">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#" class="btn btn-secondary">Resume</a>
+        <a href="#contact" class="btn btn-secondary">Contact</a>
+      </div>
 
-  <div class="buttons">
-    <a href="#" class="btn">Projects</a>
-    <a href="#" class="btn">Resume</a>
-    <a href="#" class="btn">Contact</a>
+      <div class="links">
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="right"></div>
   </div>
 
-  <div class="icons">
-    <a href="https://github.com/yourusername">GitHub</a>
-    <a href="#">LinkedIn</a>
-  </div>
-</div>
+  <section id="projects" style="padding: 80px 60px; background: white;">
+    <h2 style="font-size: 32px; margin-top: 0;">Projects</h2>
+    <div style="max-width: 900px;">
+      <div style="background: #f8fafc; padding: 24px; border-radius: 16px; margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">Project Title</h3>
+        <p style="color: #475569; line-height: 1.7; margin-bottom: 0;">
+          Add a strong one- to two-sentence description of a research project,
+          paper, analysis, or independent study here.
+        </p>
+      </div>
 
-<div class="right"></div>
+      <div style="background: #f8fafc; padding: 24px; border-radius: 16px;">
+        <h3 style="margin-top: 0;">Project Title</h3>
+        <p style="color: #475569; line-height: 1.7; margin-bottom: 0;">
+          Use this section to highlight work involving statistics, political
+          analysis, historical research, writing, or data-driven inquiry.
+        </p>
+      </div>
+    </div>
+  </section>
 
+  <section id="contact" style="padding: 80px 60px; background: #f8fafc;">
+    <h2 style="font-size: 32px; margin-top: 0;">Contact</h2>
+    <p style="font-size: 18px; color: #475569;">
+      Email: your@email.com
+    </p>
+  </section>
 </body>
 </html>
