@@ -10,9 +10,13 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       background: #f8fafc;
       color: #0f172a;
     }
@@ -28,19 +32,19 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background: #f8fafc;
     }
 
     .right {
       width: 50%;
-      background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
+      background: linear-gradient(rgba(15,23,42,0.2), rgba(15,23,42,0.2)),
+        url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
       background-size: cover;
       background-position: center;
     }
 
     .profile-img {
-      width: 170px;
-      height: 170px;
+      width: 160px;
+      height: 160px;
       object-fit: cover;
       border-radius: 50%;
       margin-bottom: 30px;
@@ -48,22 +52,22 @@
     }
 
     h1 {
-      font-size: 52px;
+      font-size: 48px;
       margin: 0;
       line-height: 1.1;
     }
 
     .alt-names {
-      font-size: 16px;
+      font-size: 15px;
       color: #64748b;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
       font-weight: 500;
       letter-spacing: 0.5px;
     }
 
     .bio {
       max-width: 560px;
-      font-size: 18px;
+      font-size: 17px;
       line-height: 1.7;
       color: #334155;
       margin-bottom: 35px;
@@ -77,11 +81,10 @@
     }
 
     .btn {
-      display: inline-block;
       padding: 12px 22px;
       border-radius: 999px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
       transition: 0.2s ease;
     }
 
@@ -110,11 +113,55 @@
       margin-right: 18px;
       color: #0f172a;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
     }
 
     .links a:hover {
       text-decoration: underline;
+    }
+
+    section {
+      padding: 80px 60px;
+    }
+
+    #projects {
+      background: white;
+    }
+
+    #contact {
+      background: #f8fafc;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-top: 0;
+    }
+
+    .project-card {
+      background: #f8fafc;
+      padding: 24px;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      transition: 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+    }
+
+    .project-card p {
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    a {
+      color: inherit;
     }
 
     @media (max-width: 900px) {
@@ -132,35 +179,36 @@
       }
 
       .right {
-        min-height: 320px;
+        min-height: 300px;
       }
 
       h1 {
-        font-size: 40px;
+        font-size: 38px;
       }
 
-      .bio {
-        font-size: 16px;
+      section {
+        padding: 50px 25px;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="left">
-      <img src="IMG_0051.png" alt="Malachi Horsangchai" class="profile-img" />
+
+  <main class="container">
+    <section class="left">
+      <img src="IMG_0051.png" alt="Portrait of Malachi Horsangchai" class="profile-img" />
 
       <h1>Malachi Horsangchai</h1>
       <div class="alt-names">
         何其昭 · นครินทร์ ฮ้อแสงชัย
       </div>
 
-      <div class="bio">
+      <p class="bio">
         I am a student at the University of Rochester studying Statistics, Political Science, and History.
-        Born in California and raised in Hong Kong, I am currently based in New York,
-        and am passionate about analyzing political and historical questions through the lens of mathematics and statistics.
-      </div>
+        Born in California and raised in Hong Kong, I am currently based in New York.
+        I am interested in using mathematics and statistical methods to analyze political systems, historical trends, and institutional behavior.
+      </p>
 
       <div class="button-group">
         <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -168,40 +216,46 @@
       </div>
 
       <div class="links">
-        <a href="https://horsangchai.github.io" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/malachihorsangchai" target="_blank">LinkedIn</a>
+        <a href="https://github.com/horsangchai" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/malachihorsangchai" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
-    </div>
+    </section>
 
-    <div class="right"></div>
-  </div>
+    <aside class="right"></aside>
+  </main>
 
-  <section id="projects" style="padding: 80px 60px; background: white;">
-    <h2 style="font-size: 32px; margin-top: 0;">Projects</h2>
+  <section id="projects">
+    <h2>Projects</h2>
+
     <div style="max-width: 900px;">
-      <div style="background: #f8fafc; padding: 24px; border-radius: 16px; margin-bottom: 20px;">
-        <h3 style="margin-top: 0;">Project Title</h3>
-        <p style="color: #475569; line-height: 1.7; margin-bottom: 0;">
-          Add a strong one- to two-sentence description of a research project,
-          paper, analysis, or independent study here.
+      <div class="project-card">
+        <h3>Quantitative Analysis of Electoral Systems</h3>
+        <p>
+          Statistical analysis of electoral systems comparing proportional and majoritarian models.
+          Focused on representation distortion, vote efficiency, and long-term political stability using simulation and historical data.
         </p>
       </div>
 
-      <div style="background: #f8fafc; padding: 24px; border-radius: 16px;">
-        <h3 style="margin-top: 0;">Project Title</h3>
-        <p style="color: #475569; line-height: 1.7; margin-bottom: 0;">
-          Use this section to highlight work involving statistics, political
-          analysis, historical research, writing, or data-driven inquiry.
+      <div class="project-card">
+        <h3>Historical Data Study: Political Transitions</h3>
+        <p>
+          Examined patterns in political transitions across multiple regions using time-series data.
+          Combined historical research with regression modeling to identify key predictors of regime change.
         </p>
       </div>
     </div>
   </section>
 
-  <section id="contact" style="padding: 80px 60px; background: #f8fafc;">
-    <h2 style="font-size: 32px; margin-top: 0;">Contact</h2>
+  <section id="contact">
+    <h2>Contact</h2>
+
     <p style="font-size: 18px; color: #475569;">
-      Email: <a href="mailto:malachihorsangchai@gmail.com">malachihorsangchai@gmail.com</a>
+      Email:
+      <a href="mailto:malachihorsangchai@gmail.com">
+        malachihorsangchai@gmail.com
+      </a>
     </p>
   </section>
+
 </body>
 </html>
