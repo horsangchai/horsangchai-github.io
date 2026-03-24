@@ -1,272 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Malachi Horsangchai</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malachi Horsangchai</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+.container {
+  display: flex;
+  min-height: 100vh;
+}
 
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #f8fafc;
-      color: #0f172a;
-    }
+.left {
+  width: 50%;
+  padding: 80px;
+}
 
-    .container {
-      display: flex;
-      min-height: 100vh;
-    }
+.right {
+  width: 50%;
+  background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
+  background-size: cover;
+}
 
-    .left {
-      width: 50%;
-      padding: 80px 60px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+.button-group {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-    .right {
-      width: 50%;
-      background: linear-gradient(rgba(15,23,42,0.2), rgba(15,23,42,0.2)),
-        url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
-      background-size: cover;
-      background-position: center;
-    }
+.btn {
+  padding: 12px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  font-weight: bold;
+}
 
-    .profile-img {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 30px;
-      border: 4px solid #0f172a;
-    }
+.btn:hover {
+  background: #eee;
+}
 
-    h1 {
-      font-size: 48px;
-      margin: 0;
-      line-height: 1.1;
-    }
+section {
+  padding: 60px;
+}
 
-    .alt-names {
-      font-size: 15px;
-      color: #64748b;
-      margin-bottom: 28px;
-      font-weight: 500;
-      letter-spacing: 0.5px;
-    }
+/* Contact Form */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
 
-    .bio {
-      max-width: 560px;
-      font-size: 17px;
-      line-height: 1.7;
-      color: #334155;
-      margin-bottom: 35px;
-    }
-
-    .button-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 30px;
-    }
-
-    .btn {
-      padding: 12px 22px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.2s ease;
-    }
-
-    .btn-primary {
-      background: #0f172a;
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: #1e293b;
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background: white;
-      color: #0f172a;
-      border: 1px solid #cbd5e1;
-    }
-
-    .btn-secondary:hover {
-      background: #f1f5f9;
-      transform: translateY(-2px);
-    }
-
-    .links a {
-      margin-right: 18px;
-      color: #0f172a;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .links a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      padding: 80px 60px;
-    }
-
-    #projects {
-      background: white;
-    }
-
-    #contact {
-      background: #f8fafc;
-    }
-
-    h2 {
-      font-size: 30px;
-      margin-top: 0;
-    }
-
-    .project-card {
-      background: #f8fafc;
-      padding: 24px;
-      border-radius: 16px;
-      margin-bottom: 20px;
-      transition: 0.2s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    }
-
-    .project-card h3 {
-      margin-top: 0;
-    }
-
-    .project-card p {
-      color: #475569;
-      line-height: 1.7;
-      margin-bottom: 0;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    @media (max-width: 900px) {
-      .container {
-        flex-direction: column;
-      }
-
-      .left,
-      .right {
-        width: 100%;
-      }
-
-      .left {
-        padding: 50px 25px;
-      }
-
-      .right {
-        min-height: 300px;
-      }
-
-      h1 {
-        font-size: 38px;
-      }
-
-      section {
-        padding: 50px 25px;
-      }
-    }
-  </style>
+button {
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: none;
+  background: #0f172a;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
 </head>
 
 <body>
 
-  <main class="container">
-    <section class="left">
-      <img src="IMG_0051.png" alt="Portrait of Malachi Horsangchai" class="profile-img" />
+<div class="container">
+  <div class="left">
 
-      <h1>Malachi Horsangchai</h1>
-      <div class="alt-names">
-        何其昭 · นครินทร์ ฮ้อแสงชัย
-      </div>
+    <h1>Malachi Horsangchai</h1>
 
-      <p class="bio">
-        I am a student at the University of Rochester studying Statistics, Political Science, and History.
-        Born in California and raised in Hong Kong, I am currently based in New York.
-        I am interested in using mathematics and statistical methods to analyze political systems, historical trends, and institutional behavior.
-      </p>
-
-      <div class="button-group">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-secondary">Contact</a>
-      </div>
-
-      <!-- Social Buttons -->
-      <div class="button-group">
-        <a href="https://www.instagram.com" target="_blank" class="btn btn-secondary">Facebook</a>
-        <a href="https://www.instagram.com" target="_blank" class="btn btn-secondary">X</a>
-        <a href="https://www.instagram.com" target="_blank" class="btn btn-secondary">Instagram</a>
-        <a href="https://www.instagram.com" target="_blank" class="btn btn-secondary">Threads</a>
-        <a href="https://www.instagram.com" target="_blank" class="btn btn-secondary">YouTube</a>
-        <a href="https://www.instagram.com" target="_blank" class="btn btn-secondary">TikTok</a>
-        <a href="https://www.instagram.com" target="_blank" class="btn btn-secondary">LinkedIn</a>
-      </div>
-
-      <div class="links">
-        <a href="https://github.com/horsangchai" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/malachihorsangchai" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </div>
-    </section>
-
-    <aside class="right"></aside>
-  </main>
-
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div style="max-width: 900px;">
-      <div class="project-card">
-        <h3>Quantitative Analysis of Electoral Systems</h3>
-        <p>
-          Statistical analysis of electoral systems comparing proportional and majoritarian models.
-          Focused on representation distortion, vote efficiency, and long-term political stability using simulation and historical data.
-        </p>
-      </div>
-
-      <div class="project-card">
-        <h3>Historical Data Study: Political Transitions</h3>
-        <p>
-          Examined patterns in political transitions across multiple regions using time-series data.
-          Combined historical research with regression modeling to identify key predictors of regime change.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-
-    <p style="font-size: 18px; color: #475569;">
-      Email:
-      <a href="mailto:malachihorsangchai@gmail.com">
-        malachihorsangchai@gmail.com
-      </a>
+    <p>
+      Student at the University of Rochester studying Statistics, Political Science, and History.
     </p>
-  </section>
+
+    <!-- MAIN BUTTONS -->
+    <div class="button-group">
+      <a href="projects.html" class="btn">Projects</a>
+      <a href="#contact" class="btn">Contact</a>
+    </div>
+
+    <!-- SOCIAL BUTTONS -->
+    <div class="button-group" style="margin-top:50px;">
+      <a href="https://www.facebook.com" target="_blank" class="btn">Facebook</a>
+      <a href="https://www.x.com" target="_blank" class="btn">X</a>
+      <a href="https://www.instagram.com" target="_blank" class="btn">Instagram</a>
+      <a href="https://www.threads.net" target="_blank" class="btn">Threads</a>
+      <a href="https://www.youtube.com" target="_blank" class="btn">YouTube</a>
+      <a href="https://www.tiktok.com" target="_blank" class="btn">TikTok</a>
+      <a href="https://www.linkedin.com" target="_blank" class="btn">LinkedIn</a>
+    </div>
+
+  </div>
+
+  <div class="right"></div>
+</div>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <h2>Contact</h2>
+
+  <form action="https://formsubmit.co/malachihorsangchai@gmail.com" method="POST">
+    
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Send Message</button>
+
+  </form>
+
+</section>
 
 </body>
 </html>
