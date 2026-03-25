@@ -127,11 +127,30 @@
       padding-left: 20px;
     }
 
+    .file-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .file-group {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .file-group h3 {
+      margin: 0 0 12px 0;
+      font-size: 17px;
+      color: #0f172a;
+    }
+
     .file-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 14px;
+      gap: 10px;
     }
 
     .btn {
@@ -161,6 +180,14 @@
       background: #1e293b;
     }
 
+    .pdf-preview {
+      width: 100%;
+      height: 700px;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      background: white;
+    }
+
     .back-row {
       margin-top: 36px;
       display: flex;
@@ -173,12 +200,20 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .file-grid {
+        grid-template-columns: 1fr;
+      }
+
       h1 {
         font-size: 36px;
       }
 
       .subtitle {
         font-size: 17px;
+      }
+
+      .pdf-preview {
+        height: 520px;
       }
     }
 
@@ -193,6 +228,10 @@
 
       h1 {
         font-size: 31px;
+      }
+
+      .pdf-preview {
+        height: 420px;
       }
     }
   </style>
@@ -212,104 +251,108 @@
       <p>
         This project reconstructs slavery in Siam as a measurable system of labor extraction, debt,
         war captivity, and ethnic classification rather than as a purely legal institution.
-        Using a manually coded dataset built from 10 historical sources and 252 observation rows,
-        the analysis estimates plausible slave-stock ranges, Lao captive totals, debt-redemption burdens,
-        census omission shares, and the relationship between abolition, administrative reform, and Bangkok-centered state formation.
+        It combines historical interpretation with structured data, reproducible analysis, and derived tables
+        to examine scale, census omission, labor networks, and abolition-era transformation.
       </p>
     </div>
 
     <div class="meta-grid">
       <div class="meta-box">
-        <div class="meta-label">Sources coded</div>
-        <div class="meta-value">10</div>
-        <div class="meta-note">6 primary sources and 4 secondary works used for reconstruction.</div>
+        <div class="meta-label">Core outputs</div>
+        <div class="meta-value">2</div>
+        <div class="meta-note">Full report in both DOCX and PDF format.</div>
       </div>
 
       <div class="meta-box">
-        <div class="meta-label">Observations</div>
-        <div class="meta-value">252</div>
-        <div class="meta-note">Manually coded historical observations in the core dataset.</div>
+        <div class="meta-label">Research notes</div>
+        <div class="meta-value">4</div>
+        <div class="meta-note">Methodology, primary sources, project README, and environment requirements.</div>
       </div>
 
       <div class="meta-box">
-        <div class="meta-label">Analytical tables</div>
-        <div class="meta-value">13</div>
-        <div class="meta-note">Derived CSV tables for scale, debt, census, networks, and abolition.</div>
+        <div class="meta-label">Code files</div>
+        <div class="meta-value">2</div>
+        <div class="meta-note">Notebook workflow plus standalone Python script.</div>
       </div>
 
       <div class="meta-box">
-        <div class="meta-label">Figures</div>
-        <div class="meta-value">10</div>
-        <div class="meta-note">Generated visualizations including a Lao captive-labor network graph.</div>
+        <div class="meta-label">Data tables</div>
+        <div class="meta-value">8</div>
+        <div class="meta-note">Structured CSV files for census, labor, captive populations, and source registry.</div>
       </div>
     </div>
 
     <section class="section">
       <h2>Overview</h2>
       <p>
-        The central finding is that Lao / Isan people were not peripheral to Siamese slavery.
-        They were structurally important to crown labor, Bangkok construction, specialized urban production,
-        and the transition from slavery to bureaucratically managed labor.
-      </p>
-      <p>
-        Rather than treating slavery as a narrow legal category, the project analyzes it as a layered labor regime
-        that combined debt bondage, hereditary status, war-captive incorporation, corvée substitution,
-        and administrative classification.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>Selected Findings</h2>
-      <ul>
-        <li>Plausible mid-century slave-stock estimates range from roughly 1.12 million to 2.10 million.</li>
-        <li>Lao accounted for 43.5% of Bowring’s listed royal war-captive fighting men.</li>
-        <li>A central dependent-inclusive Lao captive estimate reaches roughly 80,000.</li>
-        <li>The detailed 1904 census covered only 49.5% of the kingdom.</li>
-        <li>Udon and Isan alone accounted for 22.3% of the national population while being omitted from the detailed frame.</li>
-        <li>A 100-tical debt under the 1905 abolition law still implied about 25 months to freedom.</li>
-        <li>The Ministry of Local Government budget grew by roughly 51 times from 1894–95 to 1903–04.</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Methods</h2>
-      <p>
-        The project is built around a long-form historical observation table rather than a single aggregate spreadsheet.
-        Each row records one coded observation: a population count, price, wage, budget entry, legal rule,
-        bounded claim, or coded qualitative fact. This makes it possible to combine diplomatic accounts,
-        census materials, legal texts, and later scholarship without flattening the differences between them.
-      </p>
-      <p>
-        A key distinction in the analysis is between direct source values and inferred values.
-        Reported figures are kept separate from transparent reconstructions, such as dependent-inclusive captive estimates
-        derived from population benchmarks.
+        This project uses structured historical data to study slavery in Siam as a system of labor extraction,
+        regional inequality, and state formation. The project includes a full written report, reproducible analysis code,
+        methodological notes, and project datasets.
       </p>
     </section>
 
     <section class="section">
       <h2>Project Files</h2>
       <p>
-        Update these links once you upload the final assets for this project.
+        All files for this project are organized below by type.
       </p>
 
-      <div class="file-list">
-        <a href="siam_slavery_report.docx" class="btn primary" target="_blank">Report (.docx)</a>
-        <a href="#" class="btn" target="_blank">PDF</a>
-        <a href="#" class="btn" target="_blank">Notebook</a>
-        <a href="#" class="btn" target="_blank">Dataset (.csv)</a>
-        <a href="#" class="btn" target="_blank">Python (.py)</a>
-        <a href="#" class="btn" target="_blank">Markdown (.md)</a>
+      <div class="file-grid">
+        <div class="file-group">
+          <h3>Report</h3>
+          <div class="file-list">
+            <a href="siam_slavery_report.docx" class="btn primary" target="_blank">DOCX Report</a>
+            <a href="siam_slavery_report.pdf" class="btn primary" target="_blank">PDF Report</a>
+          </div>
+        </div>
+
+        <div class="file-group">
+          <h3>Analysis Code</h3>
+          <div class="file-list">
+            <a href="siam_slavery_analysis.ipynb" class="btn" target="_blank">Notebook</a>
+            <a href="run_analysis.py" class="btn" target="_blank">Python Script</a>
+            <a href="requirements.txt" class="btn" target="_blank">Requirements</a>
+          </div>
+        </div>
+
+        <div class="file-group">
+          <h3>Documentation</h3>
+          <div class="file-list">
+            <a href="methodology.md" class="btn" target="_blank">Methodology</a>
+            <a href="primary_sources.md" class="btn" target="_blank">Primary Sources</a>
+            <a href="README.md" class="btn" target="_blank">README</a>
+          </div>
+        </div>
+
+        <div class="file-group">
+          <h3>Datasets</h3>
+          <div class="file-list">
+            <a href="census_coverage_1904.csv" class="btn" target="_blank">Census Coverage</a>
+            <a href="derived metrics.csv" class="btn" target="_blank">Derived Metrics</a>
+            <a href="historical_observations.csv" class="btn" target="_blank">Historical Observations</a>
+            <a href="lao_captive_communities.csv" class="btn" target="_blank">Lao Captive Communities</a>
+            <a href="lao_labor_network_edges.csv" class="btn" target="_blank">Labor Network Edges</a>
+            <a href="royal_captive_population.csv" class="btn" target="_blank">Royal Captive Population</a>
+            <a href="slave_scale_scenarios.csv" class="btn" target="_blank">Slave Scale Scenarios</a>
+            <a href="source_registry.csv" class="btn" target="_blank">Source Registry</a>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <section class="section">
+      <h2>PDF Preview</h2>
+      <p>
+        Embedded preview of the full report.
+      </p>
+      <iframe src="siam_slavery_report.pdf" class="pdf-preview"></iframe>
     </section>
 
     <section class="section">
       <h2>Why this project matters</h2>
       <p>
-        For portfolio purposes, the contribution is both substantive and methodological.
-        Substantively, it argues that slavery in Siam was a large, multiform system of labor dependence
-        that helped sustain a Bangkok-centered political order. Methodologically, it shows how fragmentary,
-        elite-authored, and politically structured historical evidence can be transformed into a linked dataset,
-        analyzed statistically, and presented as a rigorous economic-history argument.
+        This project brings together historical research, data structuring, and reproducible analysis in a way that
+        makes a complex labor system legible through both narrative argument and quantitative evidence.
       </p>
     </section>
 
